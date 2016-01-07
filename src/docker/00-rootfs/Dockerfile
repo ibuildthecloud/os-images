@@ -1,2 +1,3 @@
 FROM scratch
-ADD build/dist/rootfs.tar /
+ADD ./build/source/dist/arm/rootfs.tar /
+COPY qemu-arm-static /usr/bin/
