@@ -1,7 +1,7 @@
 FROM rancher/os-fedoraconsole-base
 # FROM amd64=fedora:23 arm64=rancher/aarch64-fedora:23 arm=skip
 RUN dnf upgrade -y && \
-    dnf install -y iptables openssh-server rsync sudo vim less ca-certificates psmisc htop procps-ng
+    dnf install -y iptables openssh-server rsync sudo vim less ca-certificates psmisc htop procps-ng make
 RUN rm -rf /etc/ssh/*key*
 RUN rm -fr /sbin/poweroff  /sbin/shutdown /sbin/reboot /sbin/halt /usr/sbin/poweroff  /usr/sbin/shutdown /usr/sbin/reboot /usr/sbin/halt
 RUN ln -s /sbin/agetty /sbin/getty
